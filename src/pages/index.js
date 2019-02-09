@@ -46,6 +46,7 @@ class Homepage extends React.Component {
             companies like: Chick-fil-a, Vanderbuilt University, and Popvox.
             He's also a 4x 1st place hackathon winner.
           </p>
+          <hr />
           <h2
             style={{
               marginBottom: "-28px"
