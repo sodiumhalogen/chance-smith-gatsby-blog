@@ -1,7 +1,5 @@
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
-
     ```sh
     cd my-blog-starter/
     gatsby develop
