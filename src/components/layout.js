@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 import { rhythm } from "../utils/typography";
 
@@ -83,6 +85,7 @@ class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
     const rootPath = `${__PATH_PREFIX__}/`;
+    const blogPath = `${__PATH_PREFIX__}/blog`;
     let header;
 
     if (location.pathname === rootPath) {
@@ -93,7 +96,15 @@ class Layout extends React.Component {
           }}
         >
           <span>
-            <img src="/chance-smith.png" alt="chance smith" />
+            <img
+              src="/chancesmith_s.jpg"
+              alt="chance smith"
+              style={{
+                width: 100,
+                height: 100,
+                borderRadius: "50%"
+              }}
+            />
           </span>
           {/* <h1
             style={{
@@ -117,14 +128,36 @@ class Layout extends React.Component {
           </h1> */}
         </div>
       );
+    } else if (location.pathname === blogPath) {
+      header = (
+        <>
+          <h3
+            style={{
+              fontFamily: `Montserrat, sans-serif`,
+              // fontFamily: `Major Mono Display, monospace`,
+              // textTransform: "uppercase",
+              marginTop: "20px"
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+        </>
+      );
     } else {
       header = (
-        <h3
+        <div
           style={{
-            fontFamily: `Montserrat, sans-serif`,
-            // fontFamily: `Major Mono Display, monospace`,
-            // textTransform: "uppercase",
-            marginTop: 0
+            display: `flex`,
+            marginTop: "12px"
           }}
         >
           <Link
@@ -135,9 +168,47 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <span>
+              <StaticQuery
+                query={authorPhoto}
+                render={data => (
+                  <Image
+                    fixed={data.avatar.childImageSharp.fixed}
+                    alt="chance smith"
+                    style={{
+                      marginRight: rhythm(1 / 2),
+                      marginBottom: 0,
+                      minWidth: 50,
+                      borderRadius: `100%`
+                    }}
+                    imgStyle={{
+                      borderRadius: `50%`
+                    }}
+                  />
+                )}
+              />
+            </span>
           </Link>
-        </h3>
+          <h3
+            style={{
+              fontFamily: `Montserrat, sans-serif`,
+              // fontFamily: `Major Mono Display, monospace`,
+              // textTransform: "uppercase",
+              marginTop: "12px"
+            }}
+          >
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+        </div>
       );
     }
     return (
@@ -151,29 +222,36 @@ class Layout extends React.Component {
       >
         <div
           style={{
-            display: "flex",
-            flexDirection: "row-reverse"
-            // justifyContent: "space-between"
+            position: "relative"
           }}
         >
-          <div onClick={this.toggleMenu}>
-            <MenuIcon isMenuOpen={this.state.isMenuOpen}>
-              <span />
-            </MenuIcon>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row-reverse",
+              position: "absolute",
+              right: 0
+            }}
+          >
+            <div onClick={this.toggleMenu}>
+              <MenuIcon isMenuOpen={this.state.isMenuOpen}>
+                <span />
+              </MenuIcon>
+            </div>
+            <>
+              {this.state.isMenuOpen && (
+                <>
+                  <StyledButton
+                    href="http://twitter.com/chance_smith"
+                    class="button"
+                  >
+                    Contact
+                  </StyledButton>
+                  <StyledButtonLink to={`/blog`}>Blog</StyledButtonLink>
+                </>
+              )}
+            </>
           </div>
-          <>
-            {this.state.isMenuOpen && (
-              <>
-                <StyledButton
-                  href="http://twitter.com/chance_smith"
-                  class="button"
-                >
-                  Contact
-                </StyledButton>
-                <StyledButtonLink to={`/blog`}>Blog</StyledButtonLink>
-              </>
-            )}
-          </>
         </div>
         <header>{header}</header>
         <main>{children}</main>
@@ -184,3 +262,15 @@ class Layout extends React.Component {
 }
 
 export default Layout;
+
+const authorPhoto = graphql`
+  query AuthorPhotoQuery {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
