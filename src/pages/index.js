@@ -44,7 +44,7 @@ class BlogIndex extends React.Component {
           <p>
             <strong>Chance has worked with</strong> prostigious and innovative
             companies like: Chick-fil-a, Vanderbuilt University, and Popvox.
-            He's also a 3x 1st place hackathon winner.
+            He's also a 4x 1st place hackathon winner.
           </p>
           <h2
             style={{
