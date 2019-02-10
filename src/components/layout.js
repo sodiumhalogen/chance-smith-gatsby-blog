@@ -119,7 +119,7 @@ class Layout extends React.Component {
               />
             </span>
           </Link>
-          <h3
+          {/* <h3
             style={{
               fontFamily: `Montserrat, sans-serif`,
               // fontFamily: `Major Mono Display, monospace`,
@@ -137,7 +137,7 @@ class Layout extends React.Component {
             >
               {title}
             </Link>
-          </h3>
+          </h3> */}
         </div>
       );
     }
