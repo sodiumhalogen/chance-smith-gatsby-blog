@@ -1,6 +1,6 @@
 ---
 title: ELI5 - What is Docker?
-date: "2017-12-12T22:12:03.284Z"
+date: "2017-12-12T22:12:03.284Z'"
 tags:
   - web-development
 ---

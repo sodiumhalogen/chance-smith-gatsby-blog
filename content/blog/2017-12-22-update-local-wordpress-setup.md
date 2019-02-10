@@ -1,6 +1,6 @@
 ---
 title: Update - WordPress local setup
-date: "2017-12-22T22:12:03.284Z"
+date: "2017-12-22T22:12:03.284Z'"
 tags:
   - web-development
 ---
