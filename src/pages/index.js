@@ -33,6 +33,11 @@ class Homepage extends React.Component {
             solutions and creating applications with Javascript.
           </p>
           <p>
+            <strong>At home</strong> he helps his wife (Molly) with there three
+            boys (under 6). They enjoy dinner together, books, driveway bike
+            rides 😆, hammocks, swimming, night walks, and movie nights.
+          </p>
+          <p>
             <strong>Is minimalistic</strong> with his workspace, todo list, and
             creative solutions.
           </p>
@@ -45,11 +50,6 @@ class Homepage extends React.Component {
             <strong>Chance has worked with</strong> prostigious and innovative
             companies like: Chick-fil-a, Vanderbuilt University, and Popvox.
             He's also a 4x 1st place hackathon winner.
-          </p>
-          <p>
-            <strong>At home</strong> he helps his wife (Molly) with there three
-            boys (under 6). They enjoy dinner together, books, driveway bike
-            rides 😆, hammocks, swimming, night walks, and movie nights.
           </p>
           <hr />
           <h2
