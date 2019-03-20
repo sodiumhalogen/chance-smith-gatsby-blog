@@ -1,8 +1,11 @@
 ---
-title: [CITQ] Prune Old Unrenamed S3 Bucket Files
+title: CITQ - Prune Old Unrenamed S3 Bucket Files
 date: "2019-03-20T10:20:00.284Z"
 tags: CITQ, S3, AWS
 ---
+
+CITQ = Challenge in the Queue
+status: `testing`
 
 At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), we put a lot of screenshots and quick uploads into an S3 bucket with a tool called Dropzone. It's a fast way for us to share files with eachother and our customers. We used to use FileShuttle to FTP files up to a server, until it stopped working for us mid 2018.
 
