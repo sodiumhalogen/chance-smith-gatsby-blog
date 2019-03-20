@@ -1,5 +1,5 @@
 ---
-title: CITQ - Prune Old Unrenamed S3 Bucket Files
+title: CITQ - Prune Old Non-Renamed S3 Bucket Files
 date: "2019-03-20T10:20:00.284Z"
 tags: CITQ, S3, AWS
 ---
