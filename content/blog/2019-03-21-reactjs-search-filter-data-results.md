@@ -37,7 +37,7 @@ String.prototype.fuzzy = function(s) {
 };
 
 // state variable
-const search = "G";
+const search = "Dsy";
 
 const moviesFound = movies.filter(movie =>
   Object.keys(movie)
