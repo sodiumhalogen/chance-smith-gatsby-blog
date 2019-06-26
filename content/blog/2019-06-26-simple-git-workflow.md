@@ -1,51 +1,40 @@
 ---
 title: A Simple Git Workflow
-date: "2019-03-21T11:44:00.284Z"
-tags: CITQ, S3, AWS
+date: "2019-06-26T11:44:00.284Z"
+tags: GIT, Workflow
 ---
 
-At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), we've made several search fields, but thought it would be good to document an output. Here we go with just the Javascript part...
+At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), we use Git with every development project. Our primary Git hosts are Github, BitBucket, and GitLab (in that order).
 
-## data + search + filtering data = awesome
+## our common git commands
 
-```javascript
-const movies = [
-  { title: "101 Dalmations", genre: "Disney, Dog", rating: "G" },
-  { title: "102 Dalmations", genre: "Dog", rating: "G" },
-  { title: "5 Children and It", genre: "SciFi", rating: "G" },
-  { title: "Aladdin", genre: "Disney, Adventure", rating: "G" },
-  { title: "All Dogs Go to Heaven", genre: "Dog", rating: "G" },
-  { title: "Anastasia", genre: "Princess", rating: "G" },
-  { title: "Aristocats", genre: "Disney, Animal", rating: "G" },
-  {
-    title: "Aussie and Teds Great Adventure",
-    genre: "Adventure, Dog",
-    rating: "G"
-  },
-  { title: "Babe", genre: "Drama, Animal", rating: "G" }
-];
+In terminal, be sure you are in the root of your project's GIT repo. We all have a `~/wip/` work-in-progress folder where all of our development project go. So we'll do something like this...
 
-// Fuzzy Search >> source: https://stackoverflow.com/a/15252131/3979495
-String.prototype.fuzzy = function(s) {
-  var hay = this.toLowerCase(),
-    i = 0,
-    n = -1,
-    l;
-  s = s.toLowerCase();
-  for (; (l = s[i++]); ) if (!~(n = hay.indexOf(l, n + 1))) return false;
-  return true;
-};
+- `cd ~/wip/PROJECT_NAME` to access project
+- `git pull` - to fetch all changes from the remote repo (Github, Bitbucket, GitLab)
+- make some changes to the files
+- `git status` to check and see what files we have changed
+- if you want commit all the changes at once, go to the next step
+- `git add .` to add all files in current directory
+- `git commit -m "[FILE, FILE] YOUR MESSAGE HERE"` - add a note of the files you changed and what you did. Yet, [we use emmojis in our commits](https://github.com/sodiumhalogenteam/git-emoji-commit#readme).
+- `git push` - to push changes up to remote repo
 
-// state variable
-const search = "Dsy";
+## Our workflow
 
-const moviesFound = movies.filter(movie =>
-  Object.keys(movie)
-    .map(key => movie[key].fuzzy(search))
-    .reduce((acc, bool) => (bool ? acc + 1 : acc))
-);
+This is what the workflow looks like for us, with a real example.
 
-console.log(moviesFound);
-```
+- `cd ~/wip/vtx` to access the Vertex project.
+- `git status` to check if there is anything I need to commit before making new changes
+- `git pull`
+- if you want commit all the changes at once, go to the next step
+- make some changes to the files (index.html, Modal.js)
+- `git add .`
+- `git commit -m "[index, Modal] add modal root, add Modal"` - except replace with [gec](https://github.com/sodiumhalogenteam/git-emoji-commit#readme).
+- `git push` - all done, now move on to the next change
 
-pen: https://codepen.io/chancesmith/pen/RdEeva?editors=1111
+## Git tips
+
+- Use GIT often, even by yourself. Just keep using it. This will help as you do more with other developers. I've even used repo for class notes for practice.
+- FOCUS - make small changes and commit after that small change is done (like above, or when fixing a single bug)
+- Use [git-emoji-commit](https://github.com/sodiumhalogenteam/git-emoji-commit#readme) to keep yourself focused on one category of change at a time.
+- after you get the flow of GIT, create [terminal aliases](https://github.com/sodiumhalogenteam/setup-mac/blob/master/.zshrc#L118) for your git commands to speed your workflow up
