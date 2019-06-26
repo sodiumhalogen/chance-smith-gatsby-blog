@@ -1,6 +1,7 @@
 code {
   background: #363636;
-  padding: 7.7px 13px;
+  padding: 2px 9px;
   color: #31cc28;
   border-radius: 4.8px;
+  display: inline-block;
 }
