@@ -16,7 +16,7 @@ At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), we use Git
 
 ## our common git commands
 
-In terminal, be sure you are in the root of your project's GIT repo. We all have a `~/wip/` work-in-progress folder where all of our development project go. So we'll do something like this...
+In terminal, be sure you are in the root of your project's GIT repo. We all have a `~/wip/` work-in-progress folder where all of our development projects and repos go. So we'll do something like this...
 
 - `cd ~/wip/PROJECT_NAME` to access project
 - `git pull` - to fetch all changes from the remote repo (Github, Bitbucket, GitLab)
@@ -42,6 +42,7 @@ This is what the workflow looks like for us, with a real example.
 
 ## Git tips
 
+- Where ever you clone your project onto your computer, that is where you want to makes changes from here on out. This is why we put all repos in our `~/wip/` folder.
 - Use GIT often, even by yourself. Just keep using it. This will help as you do more with other developers. I've even used repo for class notes for practice.
 - FOCUS - make small changes and commit after that small change is done (like above, or when fixing a single bug)
 - Use [git-emoji-commit](https://github.com/sodiumhalogenteam/git-emoji-commit#readme) to keep yourself focused on one category of change at a time.
