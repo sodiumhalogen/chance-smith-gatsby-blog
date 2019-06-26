@@ -6,6 +6,14 @@ tags: GIT, Workflow
 
 At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), we use Git with every development project. Our primary Git hosts are Github, BitBucket, and GitLab (in that order).
 
+## quick workflow reference
+
+- `git pull`
+- `git status`
+- `git add .`
+- `git commit -m "[FILE, FILE] YOUR MESSAGE HERE"`
+- `git push`
+
 ## our common git commands
 
 In terminal, be sure you are in the root of your project's GIT repo. We all have a `~/wip/` work-in-progress folder where all of our development project go. So we'll do something like this...
