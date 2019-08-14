@@ -30,7 +30,7 @@ Utility classes are tiny bits of CSS, tied to a class name, that do one thing. H
 .pl-5 {padding-left: 5px;}
 .pl-10 {padding-left: 10px;}
 .pl-20 {padding-left: 20px;}
-...
+```
 
 ## Pros and Cons to Utility-First CSS
 
