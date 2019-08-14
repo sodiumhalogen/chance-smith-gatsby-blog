@@ -1,5 +1,5 @@
 ---
-title: Diving Into Utility First CSS
+title: Diving Into Utility-First CSS
 date: "2019-08-14T11:44:00.284Z"
 tags: CSS, BEM, Utility-First-CSS
 ---
