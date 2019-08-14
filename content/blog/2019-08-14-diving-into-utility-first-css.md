@@ -32,16 +32,14 @@ Utility classes are tiny bits of CSS, tied to a class name, that do one thing. H
 .pl-20 {padding-left: 20px;}
 ```
 
-## Pros and Cons to Utility-First CSS
-
-*Pros*
+## Pros for Utility-First CSS
 
 - writing way less CSS
 - more time in HTML (local space), less time in CSS files (global space)
 - way less class name creation/modifying
 - less BEM modifier class overhead
 
-*Cons*
+## Cons for Utility-First CSS
 
 - not as easy to duplicate styles (templates/components really help with this)
 - messy HTML, similar to inline-styles (we might just have to change the editor theme or look past it)
