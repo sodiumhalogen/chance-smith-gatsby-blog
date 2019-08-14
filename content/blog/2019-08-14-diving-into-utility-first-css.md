@@ -57,7 +57,10 @@ We haven't used the Tailwind in our no-framework project, but we have been model
   /* layout */
   .flex-24 {flex: 24 1 0%; margin-right: 30px;}
   .flex-7 {flex: 7 1 0%; min-width: 400;}
-  .border-transparent, .hover\:border-transparent:hover {border-color: transparent;}
+  .border-transparent, 
+  .hover\:border-transparent:hover {
+    border-color: transparent;
+  }
 
   /* type */
   .uppercase {text-transform: uppercase;}
