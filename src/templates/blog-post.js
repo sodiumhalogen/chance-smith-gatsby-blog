@@ -5,13 +5,29 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm, scale } from "../utils/typography";
+// import bmcButtonSvg from "../../content/assets/download-assets-sm-2.svg";
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
-    const randomBool = Math.random() < 0.5;
+
+    var ctaList = [
+      <p>
+        Did I help or save you time?{" "}
+        <a href="http://bit.ly/2O1eTBn">Reward me with a ☕️.</a>
+      </p>,
+      <p>
+        Did I help or save you time?{" "}
+        <a href="http://bit.ly/36QVlIj">Buy me a ☕️.</a>
+      </p>
+    ];
+
+    // <p>
+    //   Did I help or save you time?{" "}
+    //   <a href="http://bit.ly/34OpqXm">add BMC button from /assets/svg here</a>
+    // </p>
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -33,17 +49,8 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1)
           }}
         />
-        {randomBool ? (
-          <p>
-            Did I help or save you time?{" "}
-            <a href="http://bit.ly/2O1eTBn">Reward me with a ☕️.</a>
-          </p>
-        ) : (
-          <p>
-            Did I help or save you time?{" "}
-            <a href="http://bit.ly/36QVlIj">Buy me a ☕️.</a>
-          </p>
-        )}
+
+        {ctaList[Math.floor(Math.random() * ctaList.length)]}
 
         <Bio />
 
