@@ -9,3 +9,7 @@ At [Sodium Halogen](http://sodiumhalogen.com?ref=chancesmithio-blog), I get aske
 - **Show your work and passion**. Create many small things regularly to skill up and show your work.
 - **Sit on the shoulders of other cool-nerds**. Job shadow as soon as you can and intern with a team you're interested in.
 - **Show them what their missing**. Get to know a company you want to work for and learn about their needs/problems that you can solve. Share your solutions to those needs/problems, even if you are that solution.
+
+## Just start
+
+I'm not saying you must do these in order. Just show them your are someone that really-really wants to learn and ready to impress.
