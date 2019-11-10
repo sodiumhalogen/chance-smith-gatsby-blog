@@ -11,6 +11,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
+    const randomBool = Math.random() < 0.5;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -32,7 +33,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1)
           }}
         />
-        {new Random().nextBoolean() ? (
+        {randomBool ? (
           <p>
             Did I help or save you time?{" "}
             <a href="http://bit.ly/2O1eTBn">Reward me with a ☕️.</a>
