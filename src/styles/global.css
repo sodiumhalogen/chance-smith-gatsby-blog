@@ -5,3 +5,7 @@ code {
   border-radius: 4.8px;
   display: inline-block;
 }
+
+.decoration-none {
+  text-decoration: none;
+}
