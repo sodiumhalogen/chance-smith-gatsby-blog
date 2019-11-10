@@ -5,7 +5,7 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm, scale } from "../utils/typography";
-// import bmcButtonSvg from "../../content/assets/download-assets-sm-2.svg";
+import bmcButtonSvg from "../../content/assets/download-assets-sm-2.svg";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -21,13 +21,12 @@ class BlogPostTemplate extends React.Component {
       <p>
         Did I help or save you time?{" "}
         <a href="http://bit.ly/36QVlIj">Buy me a ☕️.</a>
+      </p>,
+      <p>
+        Did I help or save you time?{" "}
+        <a href="http://bit.ly/34OpqXm">{bmcBUttonSvg}</a>
       </p>
     ];
-
-    // <p>
-    //   Did I help or save you time?{" "}
-    //   <a href="http://bit.ly/34OpqXm">add BMC button from /assets/svg here</a>
-    // </p>
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
