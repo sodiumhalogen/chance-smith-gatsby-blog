@@ -23,9 +23,10 @@ class BlogPostTemplate extends React.Component {
         <a href="http://bit.ly/36QVlIj">Buy me a ☕️.</a>
       </p>,
       <p>
-        Did I help or save you time?{" "}
+        Did I help or save you time?
+        <br />
         <a href="http://bit.ly/34OpqXm">
-          <img src={bmcButtonSvg} />
+          <img src={bmcButtonSvg} width="180px" />
         </a>
       </p>
     ];
