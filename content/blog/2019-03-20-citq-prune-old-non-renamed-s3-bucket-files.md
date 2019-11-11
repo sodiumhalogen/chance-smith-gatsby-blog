@@ -21,3 +21,7 @@ I'm currently testing how prefixes work in the S3-Bucket/Management/Lifecycles. 
 - prefix `cs/screenshots/Screenshot` to delete all old `Screenshot 2019-03-19 14.31.55.png` files
 
 I'll keep looking at Stackoverflow and peek into the S3 buckets to see how the lifecycles are doing.
+
+## Updated 3/26/19
+
+Currently, I've found the `Screenshot` and `non-keep` prefixes worked great. I'm going to stick with this until we need to do a more refined pruning of files.

@@ -1,16 +1,35 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { rhythm, scale } from "../utils/typography";
+import bmcButtonSvg from "../../content/assets/download-assets-sm-2.svg";
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
+
+    var ctaList = [
+      <p>
+        Did I help or save you time?{" "}
+        <a href="http://bit.ly/2O1eTBn">Reward me with a ☕️.</a>
+      </p>,
+      <p>
+        Did I help or save you time?{" "}
+        <a href="http://bit.ly/36QVlIj">Buy me a ☕️.</a>
+      </p>,
+      <p>
+        Did I help or save you time?
+        <br />
+        <a href="http://bit.ly/34OpqXm">
+          <img src={bmcButtonSvg} width="180px" className="decoration-none" />
+        </a>
+      </p>
+    ];
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -21,7 +40,7 @@ class BlogPostTemplate extends React.Component {
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginTop: rhythm(-1)
           }}
         >
           {post.frontmatter.date}
@@ -29,9 +48,12 @@ class BlogPostTemplate extends React.Component {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
-            marginBottom: rhythm(1),
+            marginBottom: rhythm(1)
           }}
         />
+
+        {ctaList[Math.floor(Math.random() * ctaList.length)]}
+
         <Bio />
 
         <ul
@@ -40,7 +62,7 @@ class BlogPostTemplate extends React.Component {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>
@@ -59,11 +81,11 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -83,4 +105,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
